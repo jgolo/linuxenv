@@ -11,8 +11,7 @@ shopt -s histappend
 #To use egrep in find:
 $efind() { find "$1" -regextype posix-egrep -regex "$2"; }
 
-PS1="\e[0;36m\u\e[m@\e[0;36m\h \e[m\e[0;35m\W [\!]\e[m\\$"
-#Last '\' haas to be escaped
+PS1="\[\033[1;34m\]\u\[\033[37m\]@\[\033[0;34m\]\h\[\033[31m\] \W \[\033[35m\][\!]\[\033[33m\]\$ \[\033[00m\]"
 
     Note regarding the prompt:
     \u - username
